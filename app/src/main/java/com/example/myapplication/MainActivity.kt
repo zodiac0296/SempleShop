@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         ListProduct.add(
             Product(
-                "блич",
+                "Ичиго",
                 "https://w7.pngwing.com/pngs/417/220/png-transparent-ichigo-kurosaki-bleach-versus-crusade-anime-bleach-manga-cartoon-fictional-character.png",
                 500.0,
                 "имя героя",
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         ListProduct.add(
             Product(
-                "блич",
+                "Ренджи",
                 "https://upload.wikimedia.org/wikipedia/ru/5/51/Renji_Abarai.jpg",
                 500.0,
                 "имя героя",
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         ListProduct.add(
             Product(
-                "блич",
+                "Хитсугая",
                 "https://animecult.org/uploads/attachment/cover/10513/characters_8354.jpg",
                 500.0,
                 "имя героя",
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         ListProduct.add(
             Product(
-                "блич",
+                "Улькиора",
                 "https://w7.pngwing.com/pngs/983/904/png-transparent-undertale-brazil-mangaka-ulquiorra-cifer-ken-games-ulquiorra-mammal-black-hair-text-thumbnail.png",
                 500.0,
                 "имя героя",
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         ListProduct.add(
             Product(
-                "блич",
+                "Гримджоу",
                 "https://fanfics.me/images/fandoms_heroes/13534-1564167491.jpg",
                 500.0,
                 "имя героя",

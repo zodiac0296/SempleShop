@@ -16,26 +16,26 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Мадара"
+                android:text=""
                 android:textSize="30sp"/>
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:src="@drawable/madara"/>
+                />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:text="Этот мир полон вещей, которые ты не можешь изменить. Чем дольше ты живешь, тем больше осознаёшь, что мир состоит из боли, страдания и пустоты. Пока в этом мире существует свет, будет и тьма. До тех пор, пока есть победители, будут и проигравшие. Эгоистичное желание «мира» побуждает войны, а ненависть побуждается любовью."/>
+                android:text=""/>
 
             <Button
                 android:id="@+id/button"
