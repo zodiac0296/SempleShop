@@ -23,8 +23,7 @@ class ProductAdapter(private val array: ArrayList<Product>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_product_cell, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product_cell, parent, false)
 
         return ViewHolder(view)
     }
@@ -38,6 +37,7 @@ class ProductAdapter(private val array: ArrayList<Product>) :
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, ProductActivity::class.java)
+            intent.putExtra("Product", item)
             holder.itemView.context.startActivity(intent)
         }
     }

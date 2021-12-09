@@ -5,8 +5,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.myapplication.models.Product
+import com.example.myapplication.models.ProductAdapter
 
 class ProductActivity : AppCompatActivity() {
+
+    lateinit var Product: Product
+
 
     lateinit var textView: TextView
     lateinit var textView2: TextView
@@ -20,5 +25,9 @@ class ProductActivity : AppCompatActivity() {
         textView2 = findViewById(R.id.textView2)
         imageView = findViewById(R.id.imageView)
         button = findViewById(R.id.button)
+
+        Product = intent.getSerializableExtra("Product") as Product
+
+
     }
 }
