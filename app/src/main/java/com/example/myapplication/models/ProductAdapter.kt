@@ -37,7 +37,7 @@ class ProductAdapter(private val array: ArrayList<Product>) :
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, ProductActivity::class.java)
-            intent.putExtra("Product", item)
+            intent.putExtra("product", item)
             holder.itemView.context.startActivity(intent)
         }
     }
