@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.myapplication.cart.Cart
+import com.example.myapplication.models.CartProduct
 import com.example.myapplication.models.Product
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ProductActivity : AppCompatActivity() {
 
@@ -21,6 +23,7 @@ class ProductActivity : AppCompatActivity() {
     lateinit var button: Button
     lateinit var minus: Button
     lateinit var plus: Button
+    lateinit var cartbtn: FloatingActionButton
 
     var counter = 0
 
@@ -38,11 +41,12 @@ class ProductActivity : AppCompatActivity() {
         Glide.with(this).load(product.image).into(imageView)
         button = findViewById(R.id.add_cart_btn)
         minus = findViewById(R.id.minus)
+        cartbtn = findViewById(R.id.cartbtn)
         plus = findViewById(R.id.plus)
 
         button.setOnClickListener {
             addProduct(product)
-            Log.d("Cart", "addedProducts: ${Cart.addedProducts.size}")
+            Log.d("сart", "Корзина: Название Продукта ${Cart.addedProducts.size} кол-во: ${Cart.addedProducts.size}")
         }
 
         minus.setOnClickListener {
@@ -58,20 +62,18 @@ class ProductActivity : AppCompatActivity() {
     }
 
     fun addProduct(product: Product) {
+        if (counter <= 0) return
+        val cartProduct = CartProduct(product, counter)
         if (Cart.addedProducts.isEmpty()) {
-            Cart.addedProducts.add(product)
+            Cart.addedProducts.add(cartProduct)
+            Log.d("CART", "Cart.addedProducts.add(product)")
         } else {
-            for (prod in ArrayList<Product>(Cart.addedProducts)) {
-                if (prod.id == product.id) {
-                    //Такой продукт уже есть
-                    Log.d("Cart", "Такой продукт уже есть")
-                    break
-                } else {
-                    //Добавить продукт
-                    Cart.addedProducts.add(product)
-                }
+            if (!Cart.addedProducts.contains(cartProduct)) {
+                Cart.addedProducts.add(cartProduct)
+                Log.d("CART", "Добавить")
+            } else {
+                Log.d("CART", "Такой продукт уже есть")
             }
         }
-
     }
 }
